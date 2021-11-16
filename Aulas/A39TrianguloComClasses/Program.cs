@@ -4,32 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _38Triangulo
+namespace A39TrianguloComClasses
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            double xA, xB, xC;
-            double yA, yB, yC;
+            Triangulo x = new Triangulo();
+            Triangulo y = new Triangulo();
 
             Console.WriteLine("Medidas do triângulo X: ");
-            xA = double.Parse(Console.ReadLine());
-            xB = double.Parse(Console.ReadLine());
-            xC = double.Parse(Console.ReadLine());
+            x.A = double.Parse(Console.ReadLine());
+            x.B = double.Parse(Console.ReadLine());
+            x.C = double.Parse(Console.ReadLine());
 
             Console.WriteLine("Medidas do triângulo Y: ");
-            yA = double.Parse(Console.ReadLine());
-            yB = double.Parse(Console.ReadLine());
-            yC = double.Parse(Console.ReadLine());
+            y.A = double.Parse(Console.ReadLine());
+            y.B = double.Parse(Console.ReadLine());
+            y.C = double.Parse(Console.ReadLine());
 
-            double p = (xA + xB + xC) / 2.0;
+            double p = (x.A + x.B + x.C) / 2.0;
 
-            double areaX = Math.Sqrt(p * (p - xA) * (p - xB) + (p - xC));
+            double areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) + (p - x.C));
 
-            p = (yA + yB + yC) / 2.0;
+            p = (y.A + y.B + y.C) / 2.0;
 
-            double areaY = Math.Sqrt(p * (p - yA) * (p - yB) + (p - yB));
+            double areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) + (p - y.B));
 
             Console.WriteLine("Área de X = " + areaX.ToString("F4"));
             Console.WriteLine("Área de Y = " + areaY.ToString("F4"));
@@ -43,7 +43,7 @@ namespace _38Triangulo
                 Console.WriteLine("Maior área = Y");
             }
 
-
+            Console.ReadKey();
         }
     }
 }
