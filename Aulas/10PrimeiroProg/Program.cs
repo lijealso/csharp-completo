@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace 10PrimeiroProg
+namespace _10PrimeiroProg
 {
     class Program
     {
